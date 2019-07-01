@@ -1,0 +1,8 @@
+node_modules
+**/*.log
+.DS_Store
+.nyc_output
+\.vscode/
+coverage
+docs
+examples/*/node_modules

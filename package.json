@@ -1,0 +1,71 @@
+{
+  "name": "koa-clapp",
+  "version": "2.1.0",
+  "description": "Built arround koa js, proposed class based controllers",
+  "main": "lib/clapp.js",
+  "files": [
+    "lib/clapp.js",
+    "lib/coreApp.js",
+    "lib/coreController.js",
+    "lib/errorMiddleware.js",
+    "lib/loggerMiddleware.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/benjpoirier/koa-clapp"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test node --expose-gc ./node_modules/jest/bin/jest.js --runInBand --forceExit --logHeapUsage",
+    "lint": "eslint \"**/*.js\""
+  },
+  "author": "Benjamin Poirier",
+  "license": "ISC",
+  "bugs": {
+    "url": "http://github.com/benjpoirier/koa-clapp/issues"
+  },
+  "homepage": "http://github.com/benjpoirier/koa-clapp#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "socket.io": "^2.2.0"
+  },
+  "eslintIgnore": [
+    "node_modules"
+  ],
+  "jest": {
+    "verbose": true,
+    "roots": [
+      "tests"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1",
+    "rimraf": "^2.6.3",
+    "supertest": "^4.0.2"
+  }
+}
